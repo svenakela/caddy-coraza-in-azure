@@ -1,0 +1,19 @@
+# whatever.yourserver.net {
+#         coraza_waf {
+#                 load_owasp_crs
+#                 directives `
+#                 Include /etc/caddy/coraza.conf
+#                 Include /etc/caddy/rules/*.conf
+#                 SecRuleEngine On
+#                 `
+#         }
+# 
+#         tls my.super.special.email@yourserver.net
+#         encode zstd gzip
+# 
+#         handle * {
+#                 rewrite * /fancy-server-endpoint-name/{uri}
+#                 reverse_proxy https://10.2.1.55
+#         }
+#         log
+# }

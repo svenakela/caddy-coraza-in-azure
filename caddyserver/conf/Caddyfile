@@ -1,0 +1,5 @@
+localhost.dev {
+	tls internal
+	respond "Nothing here"
+        log
+}
